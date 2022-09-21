@@ -1,0 +1,21 @@
+getwd()
+setwd("C:/rpro/multi")
+bumpus<-read.csv("bumpus.csv")
+class(bumpus)
+attach(bumpus)
+str(bumpus)
+head(bumpus)
+summary(bumpus)
+plot(alar~length)
+#x축,y축 이름 붙이기
+par(mfrow = c(1,2))
+plot(alar~length, xlab='Length', ylab = 'Alar',main='Hermon Bumpus')
+plot(alar~length, xlab='Length', ylab = 'Alar',main='Hermon Bumpus',pch=15)
+plot(alar~length, xlab='Length', ylab = 'Alar',main='Hermon Bumpus',pch=22,bg='red')
+plot(alar~length, xlab='Length', ylab = 'Alar',main='Hermon Bumpus',pch=8,bg='green')
+#x축 전체길이,y축은 날개길이,생존 색깔로 구별
+plot(alar~length, col=survive, ph=c(0.15),bg='red',xlab='Length',ylab='Alar',main='Hermon Bumpus')
+#산점도 행렬
+iris<-read.csv("iris.csv")
+head(iris)
+str(iris)
